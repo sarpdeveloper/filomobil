@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FiloMobil — Hesap Silme Talebi</title>
+<style>
+  :root{
+    --bg:#ffffff; --fg:#1a1d21; --muted:#5a636c; --rule:#e3e7ea;
+    --accent:#16457e; --warn-bg:#fff4d6; --warn-fg:#7a5600; --warn-br:#e0b040;
+    --card:#f4f6f8;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{
+      --bg:#12161a; --fg:#e7ecf0; --muted:#9aa5ae; --rule:#283037;
+      --accent:#7fa9df; --warn-bg:#2c2416; --warn-fg:#e3b768; --warn-br:#6b5322;
+      --card:#1b2126;
+    }
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;background:var(--bg);color:var(--fg);
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+    -webkit-text-size-adjust:100%;
+  }
+  .wrap{max-width:700px;margin:0 auto;padding:40px 22px 80px}
+  h1{font-size:1.8rem;line-height:1.2;margin:0 0 8px;letter-spacing:-.02em}
+  .sub{color:var(--muted);margin:0 0 30px}
+  h2{font-size:1.15rem;margin:34px 0 10px;padding-top:16px;border-top:1px solid var(--rule)}
+  a{color:var(--accent)}
+  ul,ol{padding-left:20px}
+  li{margin:6px 0}
+  .card{background:var(--card);border-radius:8px;padding:18px 20px;margin:18px 0}
+  .card p:first-child{margin-top:0}
+  .card p:last-child{margin-bottom:0}
+  .fill{background:var(--warn-bg);color:var(--warn-fg);border:1px solid var(--warn-br);
+        border-radius:3px;padding:1px 6px;font-weight:600;font-size:.9em;white-space:nowrap}
+  .cta{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;
+       padding:13px 22px;border-radius:8px;font-weight:600;margin:8px 0}
+  .tw{overflow-x:auto;margin:14px 0}
+  table{border-collapse:collapse;width:100%;min-width:420px;font-size:.93rem}
+  th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--rule);vertical-align:top}
+  th{font-weight:600;background:var(--card)}
+  footer{margin-top:48px;padding-top:18px;border-top:1px solid var(--rule);
+         color:var(--muted);font-size:.9rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>Hesap Silme Talebi</h1>
+<p class="sub">FiloMobil — sürücü uygulaması</p>
+
+<p>
+  Hesabınızın ve verilerinizin silinmesini talep edebilirsiniz. Uygulamayı telefonunuzdan
+  silmiş olsanız da bu sayfadan talep oluşturabilirsiniz.
+</p>
+
+<h2>Nasıl talep edilir</h2>
+
+<div class="card">
+  <p><strong>1. Uygulama içinden</strong> (en hızlısı)</p>
+  <p>Profil ekranını açın → sayfanın altındaki <strong>“Hesabımı Sil”</strong> seçeneğine dokunun.</p>
+</div>
+
+<div class="card">
+  <p><strong>2. E-posta ile</strong> (uygulamaya erişiminiz yoksa)</p>
+  <p>Aşağıdaki bağlantı, gerekli bilgileri içeren bir e-posta taslağı hazırlar:</p>
+  <p>
+    <a class="cta"
+       href="mailto:kvkk@sirketalanadi.com?subject=FiloMobil%20Hesap%20Silme%20Talebi&amp;body=Ad%20Soyad%3A%20%0AKullan%C4%B1c%C4%B1%20ad%C4%B1%20veya%20e-posta%3A%20%0ATelefon%3A%20%0A%0AFiloMobil%20hesab%C4%B1m%C4%B1n%20ve%20ki%C5%9Fisel%20verilerimin%20silinmesini%20talep%20ediyorum.">
+      Silme talebi gönder
+    </a>
+  </p>
+  <p style="color:var(--muted);font-size:.92rem">
+    Bağlantı çalışmazsa <span class="fill">kvkk@sirketalanadi.com</span> adresine
+    ad-soyad ve kullanıcı adınızı yazarak e-posta gönderin.
+  </p>
+</div>
+
+<h2>Talebiniz sonrasında ne olur</h2>
+<ul>
+  <li>Talep en geç <strong>30 gün</strong> içinde sonuçlandırılır.</li>
+  <li>Kimliğinizi doğrulamak için sizinle iletişime geçilebilir.</li>
+  <li>Devam eden bir seferiniz varsa, silme işlemi sefer tamamlandıktan sonra gerçekleştirilir.</li>
+</ul>
+
+<h2>Hangi veriler silinir</h2>
+<div class="tw">
+<table>
+  <tr><th>Silinen</th><th>Saklanmaya devam eden</th></tr>
+  <tr>
+    <td>
+      Hesap ve giriş bilgileri<br>
+      Ad, soyad, e-posta, telefon<br>
+      Cihaz kaydı<br>
+      Bildirimler<br>
+      Telefonunuzdaki yerel veriler
+    </td>
+    <td>
+      Sefer ve mola kayıtları<br>
+      Yüklenen sevkiyat belgeleri<br>
+      <br>
+      <span style="color:var(--muted);font-size:.92rem">
+        Ticari ve vergisel mevzuattan doğan saklama yükümlülüğü nedeniyle
+        <span class="fill">SÜRE</span> boyunca saklanır; süre dolduğunda silinir veya
+        kimliğinizle ilişkisi koparılarak anonim hâle getirilir.
+      </span>
+    </td>
+  </tr>
+</table>
+</div>
+
+<h2>İletişim</h2>
+<p>
+  <span class="fill">ŞİRKETİN TAM TİCARİ UNVANI</span><br>
+  <span class="fill">AÇIK ADRES</span><br>
+  E-posta: <span class="fill">kvkk@sirketalanadi.com</span><br>
+  Telefon: <span class="fill">TELEFON</span>
+</p>
+
+<p><a href="index.html">← Gizlilik Politikası</a></p>
+
+<footer>
+  Sarı ile işaretli alanlar yayına almadan önce doldurulmalıdır.
+  E-posta adresini değiştirirseniz yukarıdaki <code>mailto:</code> bağlantısını da güncelleyin.
+</footer>
+
+</div>
+</body>
+</html>
