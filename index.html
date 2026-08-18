@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FiloMobil — Gizlilik Politikası</title>
+<style>
+  :root{
+    --bg:#ffffff; --fg:#1a1d21; --muted:#5a636c; --rule:#e3e7ea;
+    --accent:#16457e; --warn-bg:#fff4d6; --warn-fg:#7a5600; --warn-br:#e0b040;
+    --code-bg:#f4f6f8;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{
+      --bg:#12161a; --fg:#e7ecf0; --muted:#9aa5ae; --rule:#283037;
+      --accent:#7fa9df; --warn-bg:#2c2416; --warn-fg:#e3b768; --warn-br:#6b5322;
+      --code-bg:#1b2126;
+    }
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;background:var(--bg);color:var(--fg);
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+    -webkit-text-size-adjust:100%;
+  }
+  .wrap{max-width:760px;margin:0 auto;padding:40px 22px 80px}
+  h1{font-size:1.9rem;line-height:1.2;margin:0 0 6px;letter-spacing:-.02em}
+  .sub{color:var(--muted);margin:0 0 32px;font-size:.95rem}
+  h2{font-size:1.2rem;margin:38px 0 10px;padding-top:18px;border-top:1px solid var(--rule);letter-spacing:-.01em}
+  h3{font-size:1rem;margin:22px 0 8px}
+  p,li{color:var(--fg)}
+  a{color:var(--accent)}
+  ul{padding-left:20px}
+  li{margin:5px 0}
+  .tw{overflow-x:auto;margin:14px 0}
+  table{border-collapse:collapse;width:100%;min-width:460px;font-size:.93rem}
+  th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--rule);vertical-align:top}
+  th{font-weight:600;background:var(--code-bg)}
+  .fill{background:var(--warn-bg);color:var(--warn-fg);border:1px solid var(--warn-br);
+        border-radius:3px;padding:1px 6px;font-weight:600;font-size:.9em;white-space:nowrap}
+  .note{background:var(--code-bg);border-left:3px solid var(--accent);
+        padding:12px 16px;margin:18px 0;border-radius:0 4px 4px 0}
+  .note p{margin:0}
+  footer{margin-top:50px;padding-top:18px;border-top:1px solid var(--rule);
+         color:var(--muted);font-size:.9rem}
+  @media print{body{background:#fff;color:#000}.fill{background:none;border:1px solid #000}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>FiloMobil — Gizlilik Politikası</h1>
+<p class="sub">
+  Son güncelleme: <span class="fill">GG.AA.YYYY</span> &nbsp;·&nbsp;
+  Yürürlük: <span class="fill">GG.AA.YYYY</span>
+</p>
+
+<p>
+  Bu politika, <strong>FiloMobil</strong> mobil uygulamasının kişisel verileri nasıl
+  işlediğini açıklar. FiloMobil, filo ve sevkiyat operasyonlarını yürüten sürücülerin
+  kullanımına yönelik kurumsal bir uygulamadır; hesabınız işvereniniz tarafından
+  tanımlanır, herkese açık bir kayıt söz konusu değildir.
+</p>
+
+<h2>1. Veri sorumlusu</h2>
+<div class="tw">
+<table>
+  <tr><th>Unvan</th><td><span class="fill">ŞİRKETİN TAM TİCARİ UNVANI</span></td></tr>
+  <tr><th>Adres</th><td><span class="fill">AÇIK ADRES</span></td></tr>
+  <tr><th>MERSİS / Vergi No</th><td><span class="fill">NUMARA</span></td></tr>
+  <tr><th>VERBİS Kayıt No</th><td><span class="fill">VARSA NUMARA</span></td></tr>
+  <tr><th>E-posta</th><td><span class="fill">kvkk@sirketalanadi.com</span></td></tr>
+  <tr><th>Telefon</th><td><span class="fill">TELEFON</span></td></tr>
+</table>
+</div>
+
+<h2>2. Topladığımız veriler</h2>
+
+<h3>2.1 Sunucularımıza aktarılanlar</h3>
+<div class="tw">
+<table>
+  <tr><th>Veri</th><th>Ne zaman</th><th>Neden</th></tr>
+  <tr><td>Ad, soyad</td><td>Hesap oluşturulurken</td><td>Sefer kayıtlarında ve operasyon ekranlarında kimliklendirme</td></tr>
+  <tr><td>Kullanıcı adı, e-posta</td><td>Hesap ve giriş</td><td>Kimlik doğrulama, şifre sıfırlama, bildirim</td></tr>
+  <tr><td>Parola</td><td>Giriş</td><td>Kimlik doğrulama. Sunucuda <strong>geri döndürülemez şekilde şifrelenmiş (hash)</strong> saklanır; düz metin hâli hiçbir yerde tutulmaz</td></tr>
+  <tr><td>Cihaz tanımlayıcısı</td><td>İlk açılışta</td><td>Hesabın yalnızca kayıtlı cihazda kullanılmasını sağlamak. <strong>Kuruluma özel rastgele bir numaradır</strong>; telefonun donanım kimliği (IMEI, reklam kimliği) değildir ve uygulama silinip yeniden kurulduğunda değişir</td></tr>
+  <tr><td>Cihaz modeli, işletim sistemi sürümü</td><td>Giriş</td><td>Cihaz kaydı ve destek</td></tr>
+  <tr><td>Sefer ve görev kayıtları</td><td>Uygulama kullanılırken</td><td>Varış, yükleme/boşaltma ve çıkış saatleri, notlar</td></tr>
+  <tr><td>Mola kayıtları</td><td>Mola başlat/bitir</td><td>Çalışma ve dinlenme sürelerinin takibi</td></tr>
+  <tr><td>Yüklenen belge ve fotoğraflar</td><td>Belge yüklerken</td><td>İrsaliye, CMR ve benzeri sevkiyat evrakı</td></tr>
+</table>
+</div>
+
+<h3>2.2 Yalnızca cihazınızda kalanlar</h3>
+<ul>
+  <li><strong>Konum (GPS)</strong> — sunucularımıza gönderilmez. Ayrıntı için bölüm 3.</li>
+  <li><strong>Çevrimdışı önbellek</strong> — sefer listeniz, bildirimleriniz ve profil bilgileriniz internet olmadığında da çalışabilmesi için telefonunuzda saklanır; çıkış yaptığınızda temizlenir.</li>
+</ul>
+
+<h3>2.3 Toplamadıklarımız</h3>
+<ul>
+  <li>Reklam kimliği veya reklam amaçlı hiçbir veri</li>
+  <li>Rehber, çağrı kaydı, SMS, mikrofon</li>
+  <li>Uygulama içinde reklam gösterilmez; verileriniz pazarlama amacıyla kullanılmaz ve satılmaz</li>
+</ul>
+
+<h2>3. Konum verisi</h2>
+<p>
+  Uygulama, <strong>yalnızca siz “Noktaya Vardım” işlemini yaptığınız anda</strong> konumunuzu okur.
+</p>
+<p>
+  <strong>Ne için:</strong> bulunduğunuz yerin teslimat noktasına yeterince yakın olup olmadığını
+  kontrol etmek. Bu karşılaştırma <strong>tamamen telefonunuzun içinde</strong> yapılır.
+</p>
+<p>
+  <strong>Sunucuya ne gider:</strong> yalnızca varış işleminin yapıldığı bilgisi ve zamanı.
+  <strong>Enlem–boylam koordinatlarınız sunucularımıza gönderilmez, kaydedilmez ve saklanmaz.</strong>
+</p>
+<div class="note">
+  <p><strong>Arka planda konum takibi yapılmaz.</strong> Uygulama kapalıyken veya arka plandayken
+  konumunuz okunmaz; arka plan konum izni talep edilmez. Rota veya seyir hâlinde izleme özelliği
+  bulunmamaktadır.</p>
+</div>
+<p>Konum iznini reddedebilirsiniz; uygulama çalışmaya devam eder, yalnızca yakınlık kontrolü yapılamaz.</p>
+
+<h2>4. Kamera ve dosya erişimi</h2>
+<p>
+  <strong>Kamera</strong> yalnızca siz belge tarama veya fotoğraf çekme işlemini başlattığınızda
+  kullanılır; arka planda görüntü veya ses kaydı yapılmaz.
+</p>
+<p>
+  <strong>Dosya seçimi</strong> sırasında açılan ekran işletim sisteminin kendi seçicisidir.
+  Uygulama yalnızca <strong>sizin o ekranda seçtiğiniz dosyaya</strong> erişir; galerinizin veya
+  dosyalarınızın tamamına erişimi yoktur.
+</p>
+
+<h2>5. İşleme amaçları ve hukuki sebepler</h2>
+<div class="tw">
+<table>
+  <tr><th>Amaç</th><th>Hukuki sebep (KVKK m. 5)</th></tr>
+  <tr><td>Sefer ve görev yönetimi, sevkiyat takibi</td><td>Sözleşmenin kurulması/ifası için gerekli olması</td></tr>
+  <tr><td>Belgelerin kayda alınması</td><td>Veri sorumlusunun hukuki yükümlülüğü</td></tr>
+  <tr><td>Kimlik doğrulama ve cihaz güvenliği</td><td>Meşru menfaat (yetkisiz erişimin önlenmesi)</td></tr>
+  <tr><td>Çalışma ve mola sürelerinin takibi</td><td>Hukuki yükümlülük ve sözleşmenin ifası</td></tr>
+  <tr><td>Hata analizi ve iyileştirme</td><td>Meşru menfaat</td></tr>
+</table>
+</div>
+
+<h2>6. Verilerin paylaşımı ve yurt dışına aktarım</h2>
+<p>Verileriniz <strong>satılmaz, kiralanmaz, reklam amacıyla paylaşılmaz.</strong></p>
+<ul>
+  <li><strong>Sunucu ve altyapı:</strong> uygulama trafiği <strong>Microsoft Azure</strong> üzerinde
+      <strong>Kanada (Canada Central)</strong> bölgesinde çalışan bir ara sunucudan geçer.
+      Uygulama veritabanı ve dosya deposu <span class="fill">SUNUCU KONUMU — ör. Türkiye</span>
+      bulunmaktadır.</li>
+  <li><strong>Operasyon yönetim sistemi:</strong> sefer verileri işverenin kullandığı filo/sevkiyat
+      yönetim sistemi ile karşılıklı eşitlenir.</li>
+  <li><strong>Yetkili kamu kurumları:</strong> yasal talep veya yükümlülük hâlinde, mevzuatın
+      gerektirdiği ölçüde.</li>
+</ul>
+<div class="note">
+  <p><strong>Yurt dışına aktarım:</strong> yukarıda belirtilen ara sunucu Kanada'da bulunduğundan,
+  kişisel verileriniz işlenme sürecinde yurt dışına aktarılmaktadır. Bu aktarım KVKK m. 9 kapsamında
+  <span class="fill">HUKUKİ ZEMİN — açık rıza / taahhütname / yeterlilik kararı</span>
+  dayanağıyla gerçekleştirilmektedir.</p>
+</div>
+
+<h2>7. Saklama süreleri</h2>
+<div class="tw">
+<table>
+  <tr><th>Veri</th><th>Süre</th></tr>
+  <tr><td>Hesap bilgileri</td><td>Hesap aktif olduğu sürece</td></tr>
+  <tr><td>Sefer ve mola kayıtları</td><td><span class="fill">SÜRE — ör. 10 yıl</span></td></tr>
+  <tr><td>Yüklenen belgeler</td><td><span class="fill">SÜRE — ör. 10 yıl</span></td></tr>
+  <tr><td>Bildirimler</td><td>Kullanıcı başına en yeni 50 bildirim; daha eskiler otomatik silinir</td></tr>
+  <tr><td>Cihaz kaydı</td><td>Hesap aktif olduğu sürece</td></tr>
+  <tr><td>Telefondaki önbellek</td><td>Çıkış yaptığınızda veya uygulamayı sildiğinizde silinir</td></tr>
+</table>
+</div>
+<p>Süresi dolan veriler silinir veya anonim hâle getirilir.</p>
+
+<h2>8. Güvenlik</h2>
+<ul>
+  <li>Mobil uygulama ile sunucu arasındaki iletişim şifreli bağlantı (HTTPS/TLS) üzerinden yapılır</li>
+  <li>Parolalar geri döndürülemez şekilde şifrelenerek (hash) saklanır</li>
+  <li>Hesabınız yalnızca kayıtlı cihazınızdan kullanılabilir</li>
+  <li>Sunuculara erişim yetkilendirme ve rol bazlı kontrollerle sınırlandırılmıştır</li>
+</ul>
+<p>
+  Hiçbir sistem %100 güvenli değildir. Bir güvenlik olayı yaşanması hâlinde, KVKK'nın öngördüğü
+  süre içinde ilgili kişilere ve Kişisel Verileri Koruma Kurumu'na bildirim yapılır.
+</p>
+
+<h2>9. Haklarınız</h2>
+<p>KVKK'nın 11. maddesi uyarınca:</p>
+<ul>
+  <li>Kişisel verinizin işlenip işlenmediğini öğrenme ve buna ilişkin bilgi talep etme</li>
+  <li>İşlenme amacını ve amacına uygun kullanılıp kullanılmadığını öğrenme</li>
+  <li>Yurt içinde veya yurt dışında verilerin aktarıldığı üçüncü kişileri bilme</li>
+  <li>Eksik veya yanlış işlenmiş verilerin düzeltilmesini isteme</li>
+  <li>Verilerin silinmesini veya yok edilmesini isteme</li>
+  <li>Düzeltme/silme işlemlerinin aktarım yapılan üçüncü kişilere bildirilmesini isteme</li>
+  <li>Münhasıran otomatik sistemlerle analiz sonucu aleyhinize bir sonuç doğmasına itiraz etme</li>
+  <li>Kanuna aykırı işleme sebebiyle zarara uğramanız hâlinde zararın giderilmesini talep etme</li>
+</ul>
+<p>
+  Taleplerinizi <span class="fill">kvkk@sirketalanadi.com</span> adresine iletebilirsiniz.
+  Başvurunuz en geç <strong>30 gün</strong> içinde sonuçlandırılır.
+</p>
+
+<h2>10. Hesabınızın ve verilerinizin silinmesi</h2>
+<p><strong>Uygulama içinden:</strong> Profil ekranı → <strong>“Hesabımı Sil”</strong>.</p>
+<p><strong>Web üzerinden</strong> (uygulamayı silmiş olsanız da):
+  <a href="hesap-silme.html">Hesap silme talep sayfası</a>
+</p>
+<p>Silme talebi sonrasında:</p>
+<ul>
+  <li>Talep en geç <strong>30 gün</strong> içinde sonuçlandırılır</li>
+  <li>Hesabınız, giriş bilgileriniz, profil bilgileriniz, cihaz kaydınız ve bildirimleriniz silinir</li>
+  <li><strong>Silinemeyenler:</strong> sefer kayıtları, mola kayıtları ve sevkiyat belgeleri,
+      ticari ve vergisel mevzuattan doğan saklama yükümlülüğü nedeniyle
+      <span class="fill">SÜRE</span> boyunca saklanmaya devam eder; süre dolduğunda silinir veya
+      kimliğinizle ilişkisi koparılarak anonim hâle getirilir</li>
+  <li>Devam eden bir seferiniz varsa silme, sefer tamamlandıktan sonra gerçekleştirilir</li>
+</ul>
+<p>Uygulamayı telefonunuzdan silmeniz hesabınızı silmez; yalnızca cihazdaki yerel önbelleği kaldırır.</p>
+
+<h2>11. Çocukların gizliliği</h2>
+<p>
+  FiloMobil 18 yaşından küçüklere yönelik değildir ve bilerek 18 yaş altı kişilerden veri toplamaz.
+  Uygulama yalnızca kurumsal olarak tanımlanmış sürücü hesaplarıyla kullanılır.
+</p>
+
+<h2>12. Değişiklikler</h2>
+<p>
+  Politika güncellendiğinde bu sayfadaki “Son güncelleme” tarihi değiştirilir. Önemli
+  değişikliklerde uygulama içi bildirim ile bilgilendirme yapılır.
+</p>
+
+<h2>13. İletişim</h2>
+<p>
+  <span class="fill">ŞİRKETİN TAM TİCARİ UNVANI</span><br>
+  <span class="fill">AÇIK ADRES</span><br>
+  E-posta: <span class="fill">kvkk@sirketalanadi.com</span><br>
+  Telefon: <span class="fill">TELEFON</span>
+</p>
+
+<footer>
+  Sarı ile işaretli alanlar yayına almadan önce doldurulmalıdır.
+</footer>
+
+</div>
+</body>
+</html>
