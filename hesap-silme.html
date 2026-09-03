@@ -43,6 +43,16 @@
   th{font-weight:600;background:var(--card)}
   footer{margin-top:48px;padding-top:18px;border-top:1px solid var(--rule);
          color:var(--muted);font-size:.9rem}
+  /* Yazdirma/PDF: karanlik mod tokenleri kagida tasinmasin — tarayici arka
+     planlari atarken metin rengi acik kalirsa sayfa bos gorunur. */
+  @media print{
+    body{background:#fff;color:#000}
+    .card{background:none;border:1px solid #ccc}
+    .cta{background:none;color:#000;border:1px solid #000}
+    .fill{background:none;border:1px solid #000}
+    th{background:none}
+    a{color:#000}
+  }
 </style>
 </head>
 <body>
@@ -61,6 +71,10 @@
 <div class="card">
   <p><strong>1. Uygulama içinden</strong> (en hızlısı)</p>
   <p>Profil ekranını açın → sayfanın altındaki <strong>“Hesabımı Sil”</strong> seçeneğine dokunun.</p>
+  <p style="color:var(--muted);font-size:.92rem">
+    Bu seçenek bir <strong>silme talebi</strong> oluşturur ve talebiniz yetkili personele
+    iletilir; hesabınızı o anda silmez.
+  </p>
 </div>
 
 <div class="card">
@@ -80,15 +94,16 @@
 
 <h2>Talebiniz sonrasında ne olur</h2>
 <ul>
-  <li>Talep en geç <strong>30 gün</strong> içinde sonuçlandırılır.</li>
+  <li>Talep, <strong>tarafımıza ulaşmasından itibaren</strong> en geç <strong>30 gün</strong> içinde sonuçlandırılır.</li>
   <li>Kimliğinizi doğrulamak için sizinle iletişime geçilebilir.</li>
+  <li>Silme işlemi yetkili personel tarafından gerçekleştirilir.</li>
   <li>Devam eden bir seferiniz varsa, silme işlemi sefer tamamlandıktan sonra gerçekleştirilir.</li>
 </ul>
 
-<h2>Hangi veriler silinir</h2>
+<h2>Verilerinize ne olur</h2>
 <div class="tw">
 <table>
-  <tr><th>Silinen</th><th>Saklanmaya devam eden</th></tr>
+  <tr><th>Erişime kapatılan</th><th>Saklanmaya devam eden</th></tr>
   <tr>
     <td>
       Hesap ve giriş bilgileri<br>
@@ -96,6 +111,11 @@
       Cihaz kaydı<br>
       Bildirimler<br>
       Telefonunuzdaki yerel veriler
+      <br><br>
+      <span style="color:var(--muted);font-size:.92rem">
+        Bu bilgiler kullanılamaz hâle getirilir; hesabınızla giriş yapılamaz ve
+        bilgileriniz operasyon ekranlarında görüntülenemez.
+      </span>
     </td>
     <td>
       Sefer ve mola kayıtları<br>
@@ -103,8 +123,8 @@
       <br>
       <span style="color:var(--muted);font-size:.92rem">
         Ticari ve vergisel mevzuattan doğan saklama yükümlülüğü nedeniyle
-        mevzuatın öngördüğü süre boyunca saklanır; süre dolduğunda silinir veya
-        kimliğinizle ilişkisi koparılarak anonim hâle getirilir.
+        <strong>10 yıl</strong> (TTK m. 82 ve VUK) boyunca saklanır; süre dolduğunda
+        silinir veya kimliğinizle ilişkisi koparılarak anonim hâle getirilir.
       </span>
     </td>
   </tr>
