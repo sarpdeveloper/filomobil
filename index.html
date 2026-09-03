@@ -41,6 +41,14 @@
   .note{background:var(--code-bg);border-left:3px solid var(--accent);
         padding:12px 16px;margin:18px 0;border-radius:0 4px 4px 0}
   .note p{margin:0}
+  /* YAYIN ÖNCESİ DOLDURULACAK blok. Kasıtlı olarak göze batıyor: bu blok
+     sayfada dururken politika yayınlanmamalıdır. Doldurulunca .todo yerine
+     .note sınıfına çevrilmeli. */
+  .todo{background:var(--warn-bg);color:var(--warn-fg);border:2px dashed var(--warn-br);
+        padding:14px 18px;margin:18px 0;border-radius:4px}
+  .todo p{margin:0 0 8px}
+  .todo p:last-child{margin-bottom:0}
+  .todo strong{color:var(--warn-fg)}
   footer{margin-top:50px;padding-top:18px;border-top:1px solid var(--rule);
          color:var(--muted);font-size:.9rem}
   @media print{body{background:#fff;color:#000}.fill{background:none;border:1px solid #000}}
@@ -51,7 +59,7 @@
 
 <h1>FiloMobil — Gizlilik Politikası</h1>
 <p class="sub">
-  Son güncelleme: 19.08.2026 &nbsp;·&nbsp; Yürürlük: 19.08.2026
+  Son güncelleme: 03.09.2026 &nbsp;·&nbsp; Yürürlük: 03.09.2026
 </p>
 
 <p>
@@ -80,18 +88,20 @@
   <tr><th>Veri</th><th>Ne zaman</th><th>Neden</th></tr>
   <tr><td>Ad, soyad</td><td>Hesap oluşturulurken</td><td>Sefer kayıtlarında ve operasyon ekranlarında kimliklendirme</td></tr>
   <tr><td>Kullanıcı adı, e-posta</td><td>Hesap ve giriş</td><td>Kimlik doğrulama, şifre sıfırlama, bildirim</td></tr>
-  <tr><td>Parola</td><td>Giriş</td><td>Kimlik doğrulama. Sunucuda <strong>geri döndürülemez şekilde şifrelenmiş (hash)</strong> saklanır; düz metin hâli hiçbir yerde tutulmaz</td></tr>
+  <tr><td>Parola</td><td>Giriş</td><td>Kimlik doğrulama. Sunucuda <strong>geri döndürülemez şekilde şifrelenmiş (hash)</strong> saklanır; düz metin hâli hiçbir yerde tutulmaz ve teknik kayıtlara yazılmaz</td></tr>
   <tr><td>Cihaz tanımlayıcısı</td><td>İlk açılışta</td><td>Hesabın yalnızca kayıtlı cihazda kullanılmasını sağlamak. <strong>Kuruluma özel rastgele bir numaradır</strong>; telefonun donanım kimliği (IMEI, reklam kimliği) değildir ve uygulama silinip yeniden kurulduğunda değişir</td></tr>
-  <tr><td>Cihaz modeli, işletim sistemi sürümü</td><td>Giriş</td><td>Cihaz kaydı ve destek</td></tr>
+  <tr><td>İşletim sistemi ve sürümü</td><td>Giriş</td><td>Cihaz kaydı ve destek. Yalnızca “Android” veya “iOS” bilgisi ile işletim sistemi sürümü alınır; cihazınızın markası veya model adı okunmaz</td></tr>
+  <tr><td>Bağlantı IP adresiniz</td><td>Her istekte</td><td>Cihaz güvenliği, yetkisiz erişimin tespiti ve hata teşhisi. Cihaz kaydınızda en son bağlanılan adres olarak tutulur ve sunucu teknik kayıtlarına yazılır</td></tr>
   <tr><td>Sefer ve görev kayıtları</td><td>Uygulama kullanılırken</td><td>Varış, yükleme/boşaltma ve çıkış saatleri, notlar</td></tr>
-  <tr><td>Mola kayıtları</td><td>Mola başlat/bitir</td><td>Çalışma ve dinlenme sürelerinin takibi</td></tr>
-  <tr><td>Yüklenen belge ve fotoğraflar</td><td>Belge yüklerken</td><td>İrsaliye, CMR ve benzeri sevkiyat evrakı</td></tr>
+  <tr><td>Mola kayıtları</td><td>Mola başlat/bitir</td><td>Çalışma ve dinlenme sürelerinin takibi. Yalnızca molanın başlangıç ve bitiş zamanı kaydedilir; mola kayıtlarına konum bilgisi eklenmez</td></tr>
+  <tr><td>Yüklenen belge ve fotoğraflar</td><td>Belge yüklerken</td><td>İrsaliye, CMR ve benzeri sevkiyat evrakı. Dosyalar seçtiğiniz hâliyle aktarılır; dosyanın içinde taşınabilecek teknik bilgiler için bkz. bölüm 4</td></tr>
+  <tr><td>Bildirim okunma durumu</td><td>Bildirimi görüntülediğinizde</td><td>Aynı bildirimin tekrar gösterilmemesi; okundu bilgisi ve okunma zamanı kaydedilir</td></tr>
 </table>
 </div>
 
 <h3>2.2 Yalnızca cihazınızda kalanlar</h3>
 <ul>
-  <li><strong>Konum (GPS)</strong> — sunucularımıza gönderilmez. Ayrıntı için bölüm 3.</li>
+  <li><strong>Konum (GPS)</strong> — uygulamanın okuduğu konum sunucularımıza gönderilmez. Ayrıntı için bölüm 3 ve 4.</li>
   <li><strong>Çevrimdışı önbellek</strong> — sefer listeniz, bildirimleriniz ve profil bilgileriniz internet olmadığında da çalışabilmesi için telefonunuzda saklanır; çıkış yaptığınızda temizlenir.</li>
 </ul>
 
@@ -99,6 +109,8 @@
 <ul>
   <li>Reklam kimliği veya reklam amaçlı hiçbir veri</li>
   <li>Rehber, çağrı kaydı, SMS, mikrofon</li>
+  <li>Cihazınızın markası ve model adı</li>
+  <li>Push bildirim kimliği (FCM/APNs) — uygulama push bildirim altyapısı kullanmaz; bildirimler uygulama içinde gösterilir</li>
   <li>Uygulama içinde reklam gösterilmez; verileriniz pazarlama amacıyla kullanılmaz ve satılmaz</li>
 </ul>
 
@@ -112,14 +124,23 @@
 </p>
 <p>
   <strong>Sunucuya ne gider:</strong> yalnızca varış işleminin yapıldığı bilgisi ve zamanı.
-  <strong>Enlem–boylam koordinatlarınız sunucularımıza gönderilmez, kaydedilmez ve saklanmaz.</strong>
+  <strong>Uygulamanın okuduğu enlem–boylam koordinatlarınız sunucularımıza gönderilmez,
+  kaydedilmez ve saklanmaz.</strong> Bu taahhüt uygulamanın konum okumasına ilişkindir;
+  yüklediğiniz fotoğrafların kendi içinde taşıyabileceği bilgiler için bkz. bölüm 4.
 </p>
 <div class="note">
   <p><strong>Arka planda konum takibi yapılmaz.</strong> Uygulama kapalıyken veya arka plandayken
   konumunuz okunmaz; arka plan konum izni talep edilmez. Rota veya seyir hâlinde izleme özelliği
   bulunmamaktadır.</p>
 </div>
-<p>Konum iznini reddedebilirsiniz; uygulama çalışmaya devam eder, yalnızca yakınlık kontrolü yapılamaz.</p>
+<p>
+  <strong>Konum izni vermezseniz</strong> veya cihazınızın konum servisi kapalıysa uygulamanın
+  diğer bölümleri (sefer listesi, molalar, belge yükleme, bildirimler) normal çalışmaya devam eder.
+  Ancak “Noktaya Vardım” işlemi varışınızın doğrulanmasını gerektirdiğinden bu adımı yapamazsınız
+  ve sefer bu adımdan ileri gidemez. Bu nedenle varış kaydı için konum izni ve açık konum servisi
+  zorunludur. İzin verdiğiniz hâlde konum alınamazsa (örneğin sinyal yokluğu) işleminiz engellenmez;
+  yakınlık kontrolü atlanarak varışınız kaydedilir.
+</p>
 
 <h2>4. Kamera ve dosya erişimi</h2>
 <p>
@@ -129,43 +150,106 @@
 <p>
   <strong>Dosya seçimi</strong> sırasında açılan ekran işletim sisteminin kendi seçicisidir.
   Uygulama yalnızca <strong>sizin o ekranda seçtiğiniz dosyaya</strong> erişir; galerinizin veya
-  dosyalarınızın tamamına erişimi yoktur.
+  dosyalarınızın tamamına erişimi yoktur. iPhone ve iPad'de fotoğraf seçebilmeniz için işletim
+  sistemi sizden fotoğraf kütüphanesi erişim izni isteyebilir; bu izin yalnızca seçim
+  yapabilmeniz içindir, uygulama galerinizi taramaz veya kopyalamaz.
+</p>
+<p>
+  <strong>Dosyaların içindeki teknik bilgiler:</strong> yüklediğiniz fotoğraf ve belgeler,
+  cihazınızın veya kamera uygulamanızın dosyaya eklemiş olabileceği teknik bilgileri
+  (çekim tarihi, cihaz marka/model bilgisi ve kamera uygulamanızda konum etiketleme açıksa
+  fotoğrafın çekildiği konum dahil) içerebilir. Uygulama bu bilgileri dosyadan ayıklamaz;
+  dosyayı seçtiğiniz hâliyle aktarır. Fotoğraflarınıza konum bilgisi eklenmesini istemiyorsanız
+  kamera uygulamanızın konum etiketleme ayarını kapatabilirsiniz.
 </p>
 
 <h2>5. İşleme amaçları ve hukuki sebepler</h2>
 <p>
-  Verileriniz; sefer ve görev yönetimi, sevkiyat takibi, sevkiyat evrakının kayda alınması,
-  çalışma ve mola sürelerinin takibi, kimlik doğrulama ile cihaz güvenliğinin sağlanması ve
-  uygulamanın hatasız çalışmasının izlenmesi amaçlarıyla işlenmektedir.
+  Verileriniz aşağıdaki amaçlarla ve karşılarında belirtilen hukuki sebeplere dayanılarak
+  işlenmektedir. Uygulamanın kullanımı için açık rızanıza dayanılmamaktadır.
 </p>
-<p>
-  Hukuki sebepler KVKK m. 5 kapsamında: <strong>sözleşmenin kurulması ve ifası</strong>,
-  <strong>veri sorumlusunun hukuki yükümlülüğü</strong> ve
-  <strong>meşru menfaat</strong> (yetkisiz erişimin önlenmesi, hizmetin sürekliliği).
-</p>
+<div class="tw">
+<table>
+  <tr><th>Veri</th><th>Amaç</th><th>Hukuki sebep (KVKK m. 5/2)</th></tr>
+  <tr>
+    <td>Ad, soyad, kullanıcı adı, e-posta, parola</td>
+    <td>Kimlik doğrulama, hesabın oluşturulması ve yönetimi</td>
+    <td>Sözleşmenin kurulması ve ifası <em>(c)</em></td>
+  </tr>
+  <tr>
+    <td>Cihaz tanımlayıcısı, işletim sistemi sürümü, cihaz kaydı</td>
+    <td>Hesabın yalnızca kayıtlı cihazda kullanılması, yetkisiz erişimin önlenmesi</td>
+    <td>Sözleşmenin ifası <em>(c)</em> ve meşru menfaat <em>(f)</em></td>
+  </tr>
+  <tr>
+    <td>Sefer ve görev kayıtları, mola kayıtları</td>
+    <td>Sevkiyat operasyonunun yürütülmesi, çalışma ve dinlenme sürelerinin takibi</td>
+    <td>Sözleşmenin ifası <em>(c)</em> ve veri sorumlusunun hukuki yükümlülüğü <em>(ç)</em></td>
+  </tr>
+  <tr>
+    <td>Yüklenen sevkiyat belgeleri ve fotoğraflar</td>
+    <td>Sevkiyat evrakının kayda alınması ve saklanması</td>
+    <td>Veri sorumlusunun hukuki yükümlülüğü <em>(ç)</em> ve sözleşmenin ifası <em>(c)</em></td>
+  </tr>
+  <tr>
+    <td>IP adresi, ara sunucu ve uygulama sunucusu teknik kayıtları</td>
+    <td>Yetkisiz erişimin önlenmesi, hata teşhisi, hizmetin sürekliliği</td>
+    <td>Meşru menfaat <em>(f)</em></td>
+  </tr>
+  <tr>
+    <td>Bildirim okunma durumu ve zamanı</td>
+    <td>Aynı bildirimin tekrar gösterilmemesi</td>
+    <td>Meşru menfaat <em>(f)</em></td>
+  </tr>
+</table>
+</div>
 
 <h2>6. Verilerin paylaşımı ve yurt dışına aktarım</h2>
 <p>Verileriniz <strong>satılmaz, kiralanmaz, reklam amacıyla paylaşılmaz.</strong></p>
 <ul>
-  <li><strong>Sunucu ve altyapı:</strong> uygulama trafiği <strong>Microsoft Azure</strong> üzerinde
-      <strong>Kanada (Canada Central)</strong> bölgesinde çalışan bir ara sunucudan geçmektedir.
-      Bu ara sunucu yalnızca yönlendirme görevi görür; kişisel verileriniz burada kalıcı olarak
-      saklanmaz. Uygulama veritabanı ve yüklediğiniz belgeler Şirketimizin kendi sunucularında
-      barındırılmaktadır.</li>
+  <li><strong>Sunucu ve altyapı:</strong> uygulama trafiği <strong>Microsoft Azure</strong>
+      üzerinde <strong>Kanada (Canada Central)</strong> bölgesinde çalışan bir ara sunucudan
+      geçmektedir. Microsoft, bu hizmet bakımından <strong>veri işleyen</strong> sıfatıyla
+      hareket eder ve Şirketimizle arasındaki veri işleme sözleşmesi hükümlerine tabidir.
+      Bu ara sunucu yalnızca yönlendirme görevi görür; sefer, mola, belge ve profil
+      verileriniz burada kalıcı olarak saklanmaz. Uygulama veritabanı ve yüklediğiniz
+      belgeler Şirketimizin kendi sunucularında barındırılmaktadır.</li>
   <li><strong>Ara sunucu kayıtları:</strong> hata teşhisi ve güvenliğin sağlanması amacıyla
-      sınırlı teknik erişim kayıtları (istek zamanı, adres, işlem sonucu ve cihaz tanımlayıcısı)
-      tutulur; bu kayıtlar <strong>14 gün</strong> sonunda otomatik olarak silinir. Sefer, mola,
-      belge ve profil bilgileriniz gibi <strong>içerik verileri</strong> ile parola ve oturum
-      bilgileriniz bu kayıtlara <strong>yazılmaz</strong>.</li>
-  <li><strong>Operasyon yönetim sistemi:</strong> sefer verileri işverenin kullandığı filo/sevkiyat
-      yönetim sistemi ile karşılıklı eşitlenir.</li>
+      sınırlı teknik erişim kayıtları (istek zamanı, uygulama içi adres, işlem sonucu ve cihaz
+      tanımlayıcısı) tutulur; bu kayıtlar <strong>14 gün</strong> sonunda otomatik olarak
+      silinir. Sefer, mola, belge ve profil bilgileriniz gibi <strong>içerik verileri</strong>
+      ile parola ve oturum bilgileriniz bu kayıtlara <strong>yazılmaz</strong>.</li>
+  <li><strong>Uygulama sunucusu kayıtları:</strong> Şirketimizin kendi sunucularında, hata
+      teşhisi ve güvenliğin sağlanması amacıyla her istek için teknik kayıt tutulur. Bu kayıt;
+      istek zamanı ve süresi, uygulama içi adres, işlem sonucu, kullanıcı kimliğiniz, cihaz ve
+      uygulama bilgisi ile bağlantınızın IP adresini içerir. Kayıtlar ayrıca istek ve yanıt
+      içeriğinin sınırlı bir bölümünü içerebilir; <strong>parolanız ve oturum anahtarlarınız
+      ile giriş işlemlerinin içeriği maskelenir</strong> ve yüklediğiniz belge ile fotoğrafların
+      içeriği bu kayıtlara yazılmaz. Kayıtlar en fazla <strong>30 gün</strong> saklanır ve süre
+      sonunda otomatik olarak silinir.</li>
+  <li><strong>Operasyon yönetim sistemi:</strong> sefer ve sevkiyat verileri, işverenin
+      kullandığı filo/sevkiyat yönetim sistemi ile karşılıklı olarak eşitlenir. Bu sistemden
+      uygulamaya sefer tanımları, güzergâh noktaları ve araç eşleştirmeleri aktarılır;
+      uygulamadan bu sisteme ise sizin girdiğiniz varış, yükleme, boşaltma ve çıkış saatleri
+      aktarılır. Bu sistem Şirketimizin kendi altyapısında çalışmaktadır.</li>
   <li><strong>Yetkili kamu kurumları:</strong> yasal talep veya yükümlülük hâlinde, mevzuatın
       gerektirdiği ölçüde.</li>
 </ul>
-<div class="note">
-  <p><strong>Yurt dışına aktarım:</strong> yukarıda belirtilen ara sunucu Kanada'da bulunduğundan,
-  kişisel verileriniz işlenme sürecinde yurt dışına aktarılmaktadır. Bu aktarım, KVKK'nın 9. maddesi
-  kapsamında ve gerekli teknik ve idari güvenlik önlemleri alınarak gerçekleştirilmektedir.</p>
+
+<div class="todo">
+  <p><strong>[YAYIN ÖNCESİ DOLDURULACAK — YURT DIŞINA AKTARIM]</strong></p>
+  <p>
+    Yukarıda belirtilen ara sunucu Kanada'da bulunduğundan kişisel veriler işlenme sürecinde
+    yurt dışına aktarılmaktadır. Kanada, Kişisel Verileri Koruma Kurulu tarafından hakkında
+    yeterlilik kararı verilmiş bir ülke değildir. Bu nedenle aktarımın KVKK m. 9 kapsamındaki
+    <strong>somut dayanağı</strong> — standart sözleşme ve Kurul'a bildirimi, Kurul onaylı
+    taahhütname veya açık rıza — bu bölümde <strong>açıkça belirtilmelidir</strong>.
+  </p>
+  <p>
+    Bu blok doldurulmadan, ya da ara sunucu Türkiye'de barındırılarak aktarım tamamen ortadan
+    kaldırılmadan politika <strong>yayınlanmamalıdır</strong>. Mekanizmaya atıf yapmayan genel
+    bir “gerekli tedbirler alınmıştır” ifadesi yeterli değildir.
+  </p>
 </div>
 
 <h2>7. Saklama süreleri</h2>
@@ -173,11 +257,12 @@
 <table>
   <tr><th>Veri</th><th>Süre</th></tr>
   <tr><td>Hesap bilgileri</td><td>Hesap aktif olduğu sürece</td></tr>
-  <tr><td>Sefer ve mola kayıtları</td><td>İlgili mevzuatın öngördüğü saklama süresi boyunca</td></tr>
-  <tr><td>Yüklenen belgeler</td><td>İlgili mevzuatın öngördüğü saklama süresi boyunca</td></tr>
+  <tr><td>Sefer ve mola kayıtları</td><td>Ticari ve vergisel mevzuattan doğan saklama yükümlülüğü kapsamında <strong>10 yıl</strong> (TTK m. 82 ve VUK)</td></tr>
+  <tr><td>Yüklenen belgeler</td><td>Ticari ve vergisel mevzuattan doğan saklama yükümlülüğü kapsamında <strong>10 yıl</strong> (TTK m. 82 ve VUK)</td></tr>
   <tr><td>Bildirimler</td><td>Kullanıcı başına en yeni 50 bildirim görüntülenir; daha eskiler erişime kapatılır</td></tr>
-  <tr><td>Cihaz kaydı</td><td>Hesap aktif olduğu sürece</td></tr>
+  <tr><td>Cihaz kaydı ve son bağlantı IP adresi</td><td>Hesap aktif olduğu sürece</td></tr>
   <tr><td>Ara sunucu teknik erişim kayıtları</td><td>14 gün; süre sonunda otomatik silinir</td></tr>
+  <tr><td>Uygulama sunucusu teknik istek kayıtları</td><td>En fazla 30 gün; süre sonunda otomatik silinir</td></tr>
   <tr><td>Telefondaki önbellek</td><td>Çıkış yaptığınızda veya uygulamayı sildiğinizde silinir</td></tr>
 </table>
 </div>
@@ -187,6 +272,7 @@
 <ul>
   <li>Mobil uygulama ile sunucu arasındaki iletişim şifreli bağlantı (HTTPS/TLS) üzerinden yapılır</li>
   <li>Parolalar geri döndürülemez şekilde şifrelenerek (hash) saklanır</li>
+  <li>Teknik kayıtlarda parola, oturum anahtarı ve yetkilendirme bilgileri maskelenir</li>
   <li>Hesabınız yalnızca kayıtlı cihazınızdan kullanılabilir</li>
   <li>Sunuculara erişim yetkilendirme ve rol bazlı kontrollerle sınırlandırılmıştır</li>
 </ul>
@@ -214,7 +300,8 @@
 </ul>
 <p>
   Başvurunuzda kimlik ve iletişim bilgilerinizi eksiksiz belirtmeniz gerekir.
-  Başvurunuz en geç <strong>30 gün</strong> içinde sonuçlandırılır.
+  Başvurunuz, <strong>talebinizin tarafımıza ulaşmasından itibaren</strong> en geç
+  <strong>30 gün</strong> içinde sonuçlandırılır.
 </p>
 
 <h2>10. Hesabınızın ve verilerinizin silinmesi</h2>
@@ -222,14 +309,22 @@
 <p><strong>Web üzerinden</strong> (uygulamayı silmiş olsanız da):
   <a href="hesap-silme.html">Hesap silme talep sayfası</a>
 </p>
+<p>
+  Her iki yol da bir <strong>silme talebi</strong> oluşturur; talebiniz yetkili personele
+  iletilir ve silme işlemi onlar tarafından gerçekleştirilir. “Hesabımı Sil” seçeneğine
+  dokunmanız hesabınızı o anda silmez.
+</p>
 <p>Silme talebi sonrasında:</p>
 <ul>
-  <li>Talep en geç <strong>30 gün</strong> içinde sonuçlandırılır</li>
-  <li>Hesabınız, giriş bilgileriniz, profil bilgileriniz, cihaz kaydınız ve bildirimleriniz silinir</li>
+  <li>Talep, <strong>tarafımıza ulaşmasından itibaren</strong> en geç <strong>30 gün</strong>
+      içinde sonuçlandırılır</li>
+  <li>Hesabınız, giriş bilgileriniz, profil bilgileriniz, cihaz kaydınız ve bildirimleriniz
+      <strong>erişime kapatılır ve kullanılamaz hâle getirilir</strong>; bu bilgilerle uygulamaya
+      giriş yapılamaz ve bu bilgiler operasyon ekranlarında görüntülenemez</li>
   <li><strong>Silinemeyenler:</strong> sefer kayıtları, mola kayıtları ve sevkiyat belgeleri,
-      ticari ve vergisel mevzuattan doğan saklama yükümlülüğü nedeniyle
-      mevzuatın öngördüğü süre boyunca saklanmaya devam eder; süre dolduğunda silinir veya
-      kimliğinizle ilişkisi koparılarak anonim hâle getirilir</li>
+      ticari ve vergisel mevzuattan doğan saklama yükümlülüğü nedeniyle <strong>10 yıl</strong>
+      boyunca saklanmaya devam eder; süre dolduğunda silinir veya kimliğinizle ilişkisi
+      koparılarak anonim hâle getirilir</li>
   <li>Devam eden bir seferiniz varsa silme, sefer tamamlandıktan sonra gerçekleştirilir</li>
 </ul>
 <p>Uygulamayı telefonunuzdan silmeniz hesabınızı silmez; yalnızca cihazdaki yerel önbelleği kaldırır.</p>
