@@ -35,7 +35,7 @@
   .card p:last-child{margin-bottom:0}
   .fill{background:var(--warn-bg);color:var(--warn-fg);border:1px solid var(--warn-br);
         border-radius:3px;padding:1px 6px;font-weight:600;font-size:.9em;white-space:nowrap}
-  .cta{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;
+  .cta{display:inline-block;background:var(--accent);color:var(--bg);text-decoration:none;
        padding:13px 22px;border-radius:8px;font-weight:600;margin:8px 0}
   .tw{overflow-x:auto;margin:14px 0}
   table{border-collapse:collapse;width:100%;min-width:420px;font-size:.93rem}
@@ -103,18 +103,19 @@
 <h2>Verilerinize ne olur</h2>
 <div class="tw">
 <table>
-  <tr><th>Erişime kapatılan</th><th>Saklanmaya devam eden</th></tr>
+  <tr><th>Erişime kapatılan veya silinen</th><th>Saklanmaya devam eden</th></tr>
   <tr>
     <td>
       Hesap ve giriş bilgileri<br>
       Ad, soyad, e-posta<br>
       Profil bilgileri<br>
       Cihaz kaydı<br>
-      Telefonunuzdaki yerel veriler
+      Size gönderilmiş bildirimler
       <br><br>
       <span style="color:var(--muted);font-size:.92rem">
         Bu bilgiler kullanılamaz hâle getirilir; hesabınızla giriş yapılamaz ve
         profiliniz kullanıcı listelerinde ve operasyon ekranlarında yer almaz.
+        Size gönderilmiş bildirimler ise tamamen silinir.
         Silme öncesinde oluşmuş iş kayıtlarında ve yöneticilere iletilmiş
         bildirimlerde adınızın geçmeye devam etmesi mümkündür.
       </span>
@@ -128,10 +129,17 @@
         nedeniyle <strong>15 yıl</strong> boyunca saklanır; süre dolduğunda silinir veya
         kimliğinizle ilişkisi koparılarak anonim hâle getirilir.
       </span>
+      <br><br>
+      Teknik kayıtlar (IP adresi, istek kayıtları)<br>
+      <span style="color:var(--muted);font-size:.92rem">
+        En fazla <strong>30 gün</strong> sonra otomatik olarak silinir.
+      </span>
     </td>
   </tr>
 </table>
 </div>
+
+<p>Telefonunuzdaki yerel veriler, uygulamayı sildiğinizde kaldırılır.</p>
 
 <h2>İletişim</h2>
 <p>
