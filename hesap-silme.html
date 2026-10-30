@@ -3,18 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>FiloMobil — Gizlilik Politikası</title>
+<title>FiloMobil — Hesap Silme Talebi</title>
 <style>
   :root{
     --bg:#ffffff; --fg:#1a1d21; --muted:#5a636c; --rule:#e3e7ea;
     --accent:#16457e; --warn-bg:#fff4d6; --warn-fg:#7a5600; --warn-br:#e0b040;
-    --code-bg:#f4f6f8;
+    --card:#f4f6f8;
   }
   @media (prefers-color-scheme:dark){
     :root{
       --bg:#12161a; --fg:#e7ecf0; --muted:#9aa5ae; --rule:#283037;
       --accent:#7fa9df; --warn-bg:#2c2416; --warn-fg:#e3b768; --warn-br:#6b5322;
-      --code-bg:#1b2126;
+      --card:#1b2126;
     }
   }
   *{box-sizing:border-box}
@@ -23,310 +23,125 @@
     font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
     -webkit-text-size-adjust:100%;
   }
-  .wrap{max-width:760px;margin:0 auto;padding:40px 22px 80px}
-  h1{font-size:1.9rem;line-height:1.2;margin:0 0 6px;letter-spacing:-.02em}
-  .sub{color:var(--muted);margin:0 0 32px;font-size:.95rem}
-  h2{font-size:1.2rem;margin:38px 0 10px;padding-top:18px;border-top:1px solid var(--rule);letter-spacing:-.01em}
-  h3{font-size:1rem;margin:22px 0 8px}
-  p,li{color:var(--fg)}
+  .wrap{max-width:700px;margin:0 auto;padding:40px 22px 80px}
+  h1{font-size:1.8rem;line-height:1.2;margin:0 0 8px;letter-spacing:-.02em}
+  .sub{color:var(--muted);margin:0 0 30px}
+  h2{font-size:1.15rem;margin:34px 0 10px;padding-top:16px;border-top:1px solid var(--rule)}
   a{color:var(--accent)}
-  ul{padding-left:20px}
-  li{margin:5px 0}
-  .tw{overflow-x:auto;margin:14px 0}
-  table{border-collapse:collapse;width:100%;min-width:460px;font-size:.93rem}
-  th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--rule);vertical-align:top}
-  th{font-weight:600;background:var(--code-bg)}
+  ul,ol{padding-left:20px}
+  li{margin:6px 0}
+  .card{background:var(--card);border-radius:8px;padding:18px 20px;margin:18px 0}
+  .card p:first-child{margin-top:0}
+  .card p:last-child{margin-bottom:0}
   .fill{background:var(--warn-bg);color:var(--warn-fg);border:1px solid var(--warn-br);
         border-radius:3px;padding:1px 6px;font-weight:600;font-size:.9em;white-space:nowrap}
-  .note{background:var(--code-bg);border-left:3px solid var(--accent);
-        padding:12px 16px;margin:18px 0;border-radius:0 4px 4px 0}
-  .note p{margin:0}
-  footer{margin-top:50px;padding-top:18px;border-top:1px solid var(--rule);
+  .cta{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;
+       padding:13px 22px;border-radius:8px;font-weight:600;margin:8px 0}
+  .tw{overflow-x:auto;margin:14px 0}
+  table{border-collapse:collapse;width:100%;min-width:420px;font-size:.93rem}
+  th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--rule);vertical-align:top}
+  th{font-weight:600;background:var(--card)}
+  footer{margin-top:48px;padding-top:18px;border-top:1px solid var(--rule);
          color:var(--muted);font-size:.9rem}
-  @media print{body{background:#fff;color:#000}.fill{background:none;border:1px solid #000}}
+  /* Yazdirma/PDF: karanlik mod tokenleri kagida tasinmasin — tarayici arka
+     planlari atarken metin rengi acik kalirsa sayfa bos gorunur. */
+  @media print{
+    body{background:#fff;color:#000}
+    .card{background:none;border:1px solid #ccc}
+    .cta{background:none;color:#000;border:1px solid #000}
+    .fill{background:none;border:1px solid #000}
+    th{background:none}
+    a{color:#000}
+  }
 </style>
 </head>
 <body>
 <div class="wrap">
 
-<h1>FiloMobil — Gizlilik Politikası</h1>
-<p class="sub">
-  Son güncelleme: 27.10.2026 &nbsp;·&nbsp; Yürürlük: 27.10.2026
-</p>
+<h1>Hesap Silme Talebi</h1>
+<p class="sub">FiloMobil — sürücü uygulaması</p>
 
 <p>
-  Bu politika, <strong>FiloMobil</strong> mobil uygulamasının kişisel verileri nasıl
-  işlediğini açıklar. FiloMobil, filo ve sevkiyat operasyonlarını yürüten sürücülerin
-  kullanımına yönelik kurumsal bir uygulamadır. Uygulama üzerinden hesap oluşturma
-  talebinde bulunabilirsiniz; hesabınız yetkili personel tarafından onaylanana kadar
-  giriş yapılamaz.
+  Hesabınızın ve verilerinizin silinmesini talep edebilirsiniz. Uygulamayı telefonunuzdan
+  silmiş olsanız da bu sayfadan talep oluşturabilirsiniz.
 </p>
 
-<h2>1. Veri sorumlusu</h2>
-<div class="tw">
-<table>
-  <tr><th>Unvan</th><td>SARP HAVACILIK LOJİSTİK TURİZM SANAYİ ve TİCARET A.Ş.</td></tr>
-  <tr><th>Adres</th><td>Organize Sanayi Bölgesi, Şehitler Bulvarı 15. Cadde No:23, Eskişehir</td></tr>
-  <tr><th>E-posta</th><td><a href="mailto:kvkk@sarplojistik.com">kvkk@sarplojistik.com</a></td></tr>
-  <tr><th>Telefon</th><td>+90 222 236 22 55</td></tr>
-</table>
+<h2>Nasıl talep edilir</h2>
+
+<div class="card">
+  <p><strong>1. Uygulama içinden</strong> (en hızlısı)</p>
+  <p>Profil ekranını açın → sayfanın altındaki <strong>“Hesabımı Sil”</strong> seçeneğine dokunun.</p>
+  <p style="color:var(--muted);font-size:.92rem">
+    Bu seçenek bir <strong>silme talebi</strong> oluşturur ve talebiniz yetkili personele
+    iletilir; hesabınızı o anda silmez.
+  </p>
 </div>
 
-<h2>2. Topladığımız veriler</h2>
-
-<h3>2.1 Sunucularımıza aktarılanlar</h3>
-<div class="tw">
-<table>
-  <tr><th>Veri</th><th>Ne zaman</th><th>Neden</th></tr>
-  <tr><td>Ad, soyad</td><td>Hesap oluşturulurken</td><td>Sefer kayıtlarında ve operasyon ekranlarında kimliklendirme</td></tr>
-  <tr><td>Kullanıcı adı, e-posta</td><td>Hesap ve giriş</td><td>Kimlik doğrulama ve hesabın tanımlanması</td></tr>
-  <tr><td>Parola</td><td>Giriş</td><td>Kimlik doğrulama. Sunucuda <strong>geri döndürülemez şekilde şifrelenmiş (hash)</strong> saklanır; düz metin hâli hiçbir yerde tutulmaz ve teknik kayıtlara yazılmaz</td></tr>
-  <tr><td>Cihaz tanımlayıcısı</td><td>İlk açılışta</td><td>Hesabın yalnızca kayıtlı cihazda kullanılmasını sağlamak. <strong>Kuruluma özel rastgele bir numaradır</strong>; telefonun donanım kimliği (IMEI, reklam kimliği) değildir ve uygulama silinip yeniden kurulduğunda değişir</td></tr>
-  <tr><td>İşletim sistemi ve sürümü</td><td>Giriş</td><td>Cihaz kaydı ve destek. Yalnızca “Android” veya “iOS” bilgisi ile işletim sistemi sürümü alınır; cihazınızın markası veya model adı okunmaz</td></tr>
-  <tr><td>Bağlantı IP adresiniz</td><td>Her istekte</td><td>Cihaz güvenliği, yetkisiz erişimin tespiti ve hata teşhisi. Cihaz kaydınızda en son bağlanılan adres olarak tutulur ve sunucu teknik kayıtlarına yazılır</td></tr>
-  <tr><td>Sefer ve görev kayıtları</td><td>Uygulama kullanılırken</td><td>Varış, yükleme/boşaltma ve çıkış saatleri, notlar</td></tr>
-  <tr><td>Mola kayıtları</td><td>Mola başlat/bitir</td><td>Çalışma ve dinlenme sürelerinin takibi. Yalnızca molanın başlangıç ve bitiş zamanı kaydedilir; mola kayıtlarına konum bilgisi eklenmez</td></tr>
-  <tr><td>Yüklenen belge ve fotoğraflar</td><td>Belge yüklerken</td><td>İrsaliye, CMR ve benzeri sevkiyat evrakı. Dosyalar seçtiğiniz hâliyle aktarılır; dosyanın içinde taşınabilecek teknik bilgiler için bkz. bölüm 4</td></tr>
-  <tr><td>Bildirim okunma durumu</td><td>Bildirimi görüntülediğinizde</td><td>Aynı bildirimin tekrar gösterilmemesi; okundu bilgisi ve okunma zamanı kaydedilir</td></tr>
-</table>
+<div class="card">
+  <p><strong>2. E-posta ile</strong> (uygulamaya erişiminiz yoksa)</p>
+  <p>Aşağıdaki bağlantı, gerekli bilgileri içeren bir e-posta taslağı hazırlar:</p>
+  <p>
+    <a class="cta"
+       href="mailto:kvkk@sarplojistik.com?subject=FiloMobil%20Hesap%20Silme%20Talebi&amp;body=Ad%20Soyad%3A%20%0AKullan%C4%B1c%C4%B1%20ad%C4%B1%20veya%20e-posta%3A%20%0A%0AFiloMobil%20hesab%C4%B1m%C4%B1n%20ve%20ki%C5%9Fisel%20verilerimin%20silinmesini%20talep%20ediyorum.">
+      Silme talebi gönder
+    </a>
+  </p>
+  <p style="color:var(--muted);font-size:.92rem">
+    Bağlantı çalışmazsa <a href="mailto:kvkk@sarplojistik.com">kvkk@sarplojistik.com</a> adresine
+    ad-soyad ve kullanıcı adınızı yazarak e-posta gönderin.
+  </p>
 </div>
 
-<h3>2.2 Yalnızca cihazınızda kalanlar</h3>
+<h2>Talebiniz sonrasında ne olur</h2>
 <ul>
-  <li><strong>Konum (GPS)</strong> — uygulamanın okuduğu konum sunucularımıza gönderilmez. Ayrıntı için bölüm 3 ve 4.</li>
-  <li><strong>Çevrimdışı önbellek</strong> — sefer listeniz, bildirimleriniz ve profil bilgileriniz internet olmadığında da çalışabilmesi için telefonunuzda saklanır; çıkış yaptığınızda temizlenir.</li>
+  <li>Talep, <strong>tarafımıza ulaşmasından itibaren</strong> en geç <strong>30 gün</strong> içinde sonuçlandırılır.</li>
+  <li>Kimliğinizi doğrulamak için sizinle iletişime geçilebilir.</li>
+  <li>Silme işlemi yetkili personel tarafından gerçekleştirilir.</li>
+  <li>Devam eden bir seferiniz varsa talebiniz, sefer tamamlandıktan sonra sonuçlandırılır.</li>
 </ul>
 
-<h3>2.3 Toplamadıklarımız</h3>
-<ul>
-  <li>Reklam kimliği veya reklam amaçlı hiçbir veri</li>
-  <li>Rehber, çağrı kaydı, SMS, mikrofon</li>
-  <li>Cihazınızın markası ve model adı</li>
-  <li>Push bildirim kimliği (FCM/APNs) — uygulama push bildirim altyapısı kullanmaz; bildirimler uygulama içinde gösterilir</li>
-  <li>Uygulama içinde reklam gösterilmez; verileriniz pazarlama amacıyla kullanılmaz ve satılmaz</li>
-</ul>
-
-<h2>3. Konum verisi</h2>
-<p>
-  Uygulama, <strong>yalnızca siz “Noktaya Vardım” işlemini yaptığınız anda</strong> konumunuzu okur.
-</p>
-<p>
-  <strong>Ne için:</strong> bulunduğunuz yerin teslimat noktasına yeterince yakın olup olmadığını
-  kontrol etmek. Bu karşılaştırma <strong>tamamen telefonunuzun içinde</strong> yapılır.
-</p>
-<p>
-  <strong>Sunucuya ne gider:</strong> yalnızca varış işleminin yapıldığı bilgisi ve zamanı.
-  <strong>Uygulamanın okuduğu enlem–boylam koordinatlarınız sunucularımıza gönderilmez,
-  kaydedilmez ve saklanmaz.</strong> Bu taahhüt uygulamanın konum okumasına ilişkindir;
-  yüklediğiniz fotoğrafların kendi içinde taşıyabileceği bilgiler için bkz. bölüm 4.
-</p>
-<div class="note">
-  <p><strong>Arka planda konum takibi yapılmaz.</strong> Uygulama kapalıyken veya arka plandayken
-  konumunuz okunmaz; arka plan konum izni talep edilmez. Rota veya seyir hâlinde izleme özelliği
-  bulunmamaktadır.</p>
-</div>
-<p>
-  <strong>Konum izni vermezseniz</strong> veya cihazınızın konum servisi kapalıysa uygulamanın
-  diğer bölümleri (sefer listesi, molalar, belge yükleme, bildirimler) normal çalışmaya devam eder.
-  Ancak “Noktaya Vardım” işlemi varışınızın doğrulanmasını gerektirdiğinden bu adımı yapamazsınız
-  ve sefer bu adımdan ileri gidemez. Bu nedenle varış kaydı için konum izni ve açık konum servisi
-  zorunludur. İzin verdiğiniz hâlde konum alınamazsa (örneğin sinyal yokluğu) işleminiz engellenmez;
-  yakınlık kontrolü atlanarak varışınız kaydedilir.
-</p>
-
-<h2>4. Kamera ve dosya erişimi</h2>
-<p>
-  <strong>Kamera</strong> yalnızca siz belge tarama veya fotoğraf çekme işlemini başlattığınızda
-  kullanılır; arka planda görüntü veya ses kaydı yapılmaz.
-</p>
-<p>
-  <strong>Dosya seçimi</strong> sırasında açılan ekran işletim sisteminin kendi seçicisidir.
-  Uygulama yalnızca <strong>sizin o ekranda seçtiğiniz dosyaya</strong> erişir; galerinizin veya
-  dosyalarınızın tamamına erişimi yoktur. iPhone ve iPad'de fotoğraf seçebilmeniz için işletim
-  sistemi sizden fotoğraf kütüphanesi erişim izni isteyebilir; bu izin yalnızca seçim
-  yapabilmeniz içindir, uygulama galerinizi taramaz veya kopyalamaz.
-</p>
-<p>
-  <strong>Dosyaların içindeki teknik bilgiler:</strong> yüklediğiniz fotoğraf ve belgeler,
-  cihazınızın veya kamera uygulamanızın dosyaya eklemiş olabileceği teknik bilgileri
-  (çekim tarihi, cihaz marka/model bilgisi ve kamera uygulamanızda konum etiketleme açıksa
-  fotoğrafın çekildiği konum dahil) içerebilir. Uygulama bu bilgileri dosyadan ayıklamaz;
-  dosyayı seçtiğiniz hâliyle aktarır. Fotoğraflarınıza konum bilgisi eklenmesini istemiyorsanız
-  kamera uygulamanızın konum etiketleme ayarını kapatabilirsiniz.
-</p>
-
-<h2>5. İşleme amaçları ve hukuki sebepler</h2>
-<p>
-  Verileriniz aşağıdaki amaçlarla ve karşılarında belirtilen hukuki sebeplere dayanılarak
-  işlenmektedir. Uygulamanın kullanımı için açık rızanıza dayanılmamaktadır.
-</p>
+<h2>Verilerinize ne olur</h2>
 <div class="tw">
 <table>
-  <tr><th>Veri</th><th>Amaç</th><th>Hukuki sebep (KVKK m. 5/2)</th></tr>
+  <tr><th>Erişime kapatılan</th><th>Saklanmaya devam eden</th></tr>
   <tr>
-    <td>Ad, soyad, kullanıcı adı, e-posta, parola</td>
-    <td>Kimlik doğrulama, hesabın oluşturulması ve yönetimi</td>
-    <td>Sözleşmenin kurulması ve ifası <em>(c)</em></td>
-  </tr>
-  <tr>
-    <td>Cihaz tanımlayıcısı, işletim sistemi sürümü, cihaz kaydı</td>
-    <td>Hesabın yalnızca kayıtlı cihazda kullanılması, yetkisiz erişimin önlenmesi</td>
-    <td>Sözleşmenin ifası <em>(c)</em> ve meşru menfaat <em>(f)</em></td>
-  </tr>
-  <tr>
-    <td>Sefer ve görev kayıtları, mola kayıtları</td>
-    <td>Sevkiyat operasyonunun yürütülmesi, çalışma ve dinlenme sürelerinin takibi</td>
-    <td>Sözleşmenin ifası <em>(c)</em> ve veri sorumlusunun hukuki yükümlülüğü <em>(ç)</em></td>
-  </tr>
-  <tr>
-    <td>Yüklenen sevkiyat belgeleri ve fotoğraflar</td>
-    <td>Sevkiyat evrakının kayda alınması ve saklanması</td>
-    <td>Veri sorumlusunun hukuki yükümlülüğü <em>(ç)</em> ve sözleşmenin ifası <em>(c)</em></td>
-  </tr>
-  <tr>
-    <td>IP adresi, ara sunucu ve uygulama sunucusu teknik kayıtları</td>
-    <td>Yetkisiz erişimin önlenmesi, hata teşhisi, hizmetin sürekliliği</td>
-    <td>Meşru menfaat <em>(f)</em></td>
-  </tr>
-  <tr>
-    <td>Bildirim okunma durumu ve zamanı</td>
-    <td>Aynı bildirimin tekrar gösterilmemesi</td>
-    <td>Meşru menfaat <em>(f)</em></td>
+    <td>
+      Hesap ve giriş bilgileri<br>
+      Ad, soyad, e-posta<br>
+      Profil bilgileri<br>
+      Cihaz kaydı<br>
+      Telefonunuzdaki yerel veriler
+      <br><br>
+      <span style="color:var(--muted);font-size:.92rem">
+        Bu bilgiler kullanılamaz hâle getirilir; hesabınızla giriş yapılamaz ve
+        profiliniz kullanıcı listelerinde ve operasyon ekranlarında yer almaz.
+        Silme öncesinde oluşmuş iş kayıtlarında ve yöneticilere iletilmiş
+        bildirimlerde adınızın geçmeye devam etmesi mümkündür.
+      </span>
+    </td>
+    <td>
+      Sefer ve mola kayıtları<br>
+      Yüklenen sevkiyat belgeleri<br>
+      <br>
+      <span style="color:var(--muted);font-size:.92rem">
+        İş ilişkisi ile ticari ve vergisel mevzuattan doğan saklama yükümlülükleri
+        nedeniyle <strong>15 yıl</strong> boyunca saklanır; süre dolduğunda silinir veya
+        kimliğinizle ilişkisi koparılarak anonim hâle getirilir.
+      </span>
+    </td>
   </tr>
 </table>
 </div>
 
-<h2>6. Verilerin paylaşımı</h2>
-<p>Verileriniz <strong>satılmaz, kiralanmaz, reklam amacıyla paylaşılmaz.</strong></p>
-<ul>
-  <li><strong>Sunucu ve altyapı:</strong> uygulama trafiği, <strong>Türkiye'de</strong>
-      bulunan ve bir bulut hizmet sağlayıcısından kiralanan bir ara sunucudan geçmektedir.
-      Hizmet sağlayıcı, bu hizmet bakımından <strong>veri işleyen</strong> sıfatıyla hareket
-      eder ve Şirketimizle arasındaki sözleşme hükümlerine tabidir. Bu ara sunucu yalnızca
-      yönlendirme görevi görür; sefer, mola, belge ve profil verileriniz burada kalıcı olarak
-      saklanmaz. Uygulama veritabanı ve yüklediğiniz belgeler Şirketimizin kendi
-      sunucularında barındırılmaktadır.</li>
-  <li><strong>Ara sunucu kayıtları:</strong> hata teşhisi ve güvenliğin sağlanması amacıyla
-      sınırlı teknik erişim kayıtları (istek zamanı, uygulama içi adres, işlem sonucu ve cihaz
-      tanımlayıcısı) tutulur; bu kayıtlar <strong>14 gün</strong> sonunda otomatik olarak
-      silinir. Sefer, mola, belge ve profil bilgileriniz gibi <strong>içerik verileri</strong>
-      ile parola ve oturum bilgileriniz bu kayıtlara <strong>yazılmaz</strong>.</li>
-  <li><strong>Uygulama sunucusu kayıtları:</strong> Şirketimizin kendi sunucularında, hata
-      teşhisi ve güvenliğin sağlanması amacıyla her istek için teknik kayıt tutulur. Bu kayıt;
-      istek zamanı ve süresi, uygulama içi adres, işlem sonucu, kullanıcı kimliğiniz, cihaz ve
-      uygulama bilgisi ile bağlantınızın IP adresini içerir. Kayıtlar ayrıca istek ve yanıt
-      içeriğinin sınırlı bir bölümünü içerebilir; <strong>parolanız ve oturum anahtarlarınız
-      ile giriş işlemlerinin içeriği maskelenir</strong> ve yüklediğiniz belge ile fotoğrafların
-      içeriği bu kayıtlara yazılmaz. Kayıtlar en fazla <strong>30 gün</strong> saklanır ve süre
-      sonunda otomatik olarak silinir.</li>
-  <li><strong>Operasyon yönetim sistemi:</strong> sefer ve sevkiyat verileri, işverenin
-      kullandığı filo/sevkiyat yönetim sistemi ile karşılıklı olarak eşitlenir. Bu sistemden
-      uygulamaya sefer tanımları, güzergâh noktaları ve araç eşleştirmeleri aktarılır;
-      uygulamadan bu sisteme ise sizin girdiğiniz varış, yükleme, boşaltma ve çıkış saatleri
-      aktarılır. Bu sistem Şirketimizin kendi altyapısında çalışmaktadır.</li>
-  <li><strong>Yetkili kamu kurumları:</strong> yasal talep veya yükümlülük hâlinde, mevzuatın
-      gerektirdiği ölçüde.</li>
-</ul>
-
-<h2>7. Saklama süreleri</h2>
-<div class="tw">
-<table>
-  <tr><th>Veri</th><th>Süre</th></tr>
-  <tr><td>Hesap bilgileri</td><td>Hesap aktif olduğu sürece</td></tr>
-  <tr><td>Sefer ve mola kayıtları</td><td>İş ilişkisi ile ticari ve vergisel mevzuattan doğan saklama yükümlülükleri kapsamında <strong>15 yıl</strong></td></tr>
-  <tr><td>Yüklenen belgeler</td><td>İş ilişkisi ile ticari ve vergisel mevzuattan doğan saklama yükümlülükleri kapsamında <strong>15 yıl</strong></td></tr>
-  <tr><td>Bildirimler</td><td>Kullanıcı başına en yeni 50 bildirim görüntülenir; daha eskiler erişime kapatılır</td></tr>
-  <tr><td>Cihaz kaydı ve son bağlantı IP adresi</td><td>Hesap aktif olduğu sürece</td></tr>
-  <tr><td>Ara sunucu teknik erişim kayıtları</td><td>14 gün; süre sonunda otomatik silinir</td></tr>
-  <tr><td>Uygulama sunucusu teknik istek kayıtları</td><td>En fazla 30 gün; süre sonunda otomatik silinir</td></tr>
-  <tr><td>Telefondaki önbellek</td><td>Çıkış yaptığınızda veya uygulamayı sildiğinizde silinir</td></tr>
-</table>
-</div>
-<p>Süresi dolan veriler silinir veya anonim hâle getirilir.</p>
-
-<h2>8. Güvenlik</h2>
-<ul>
-  <li>Mobil uygulama ile sunucu arasındaki iletişim şifreli bağlantı (HTTPS/TLS) üzerinden yapılır</li>
-  <li>Parolalar geri döndürülemez şekilde şifrelenerek (hash) saklanır</li>
-  <li>Teknik kayıtlarda parola, oturum anahtarı ve yetkilendirme bilgileri maskelenir</li>
-  <li>Hesabınız yalnızca kayıtlı cihazınızdan kullanılabilir</li>
-  <li>Sunuculara erişim yetkilendirme ve rol bazlı kontrollerle sınırlandırılmıştır</li>
-</ul>
-<p>
-  Hiçbir sistem %100 güvenli değildir. Bir güvenlik olayı yaşanması hâlinde, KVKK'nın öngördüğü
-  süre içinde ilgili kişilere ve Kişisel Verileri Koruma Kurumu'na bildirim yapılır.
-</p>
-
-<h2>9. Haklarınız</h2>
-<p>
-  KVKK'nın 11. maddesi uyarınca; verilerinizin işlenip işlenmediğini <strong>öğrenme</strong>,
-  buna ilişkin <strong>bilgi ve kopya talep etme</strong>, eksik veya yanlış işlenmişse
-  <strong>düzeltilmesini</strong>, şartları oluştuğunda <strong>silinmesini veya yok edilmesini</strong>
-  isteme; aktarım yapılan üçüncü kişileri <strong>öğrenme</strong> ve bu işlemlerin onlara
-  <strong>bildirilmesini</strong> talep etme; otomatik analiz sonucu aleyhinize doğan sonuçlara
-  <strong>itiraz etme</strong> ve hukuka aykırı işleme nedeniyle uğradığınız
-  <strong>zararın giderilmesini</strong> isteme haklarına sahipsiniz.
-</p>
-<p>
-  Taleplerinizi aşağıdaki kanallardan iletebilirsiniz:
-</p>
-<ul>
-  <li>E-posta: <a href="mailto:kvkk@sarplojistik.com">kvkk@sarplojistik.com</a></li>
-  <li>Yazılı başvuru: yukarıdaki adrese elden, noter aracılığıyla veya taahhütlü posta ile</li>
-</ul>
-<p>
-  Başvurunuzda kimlik ve iletişim bilgilerinizi eksiksiz belirtmeniz gerekir.
-  Başvurunuz, <strong>talebinizin tarafımıza ulaşmasından itibaren</strong> en geç
-  <strong>30 gün</strong> içinde sonuçlandırılır.
-</p>
-
-<h2>10. Hesabınızın ve verilerinizin silinmesi</h2>
-<p><strong>Uygulama içinden:</strong> Profil ekranı → <strong>“Hesabımı Sil”</strong>.</p>
-<p><strong>Web üzerinden</strong> (uygulamayı silmiş olsanız da):
-  <a href="hesap-silme.html">Hesap silme talep sayfası</a>
-</p>
-<p>
-  Her iki yol da bir <strong>silme talebi</strong> oluşturur; talebiniz yetkili personele
-  iletilir ve silme işlemi onlar tarafından gerçekleştirilir. “Hesabımı Sil” seçeneğine
-  dokunmanız hesabınızı o anda silmez.
-</p>
-<p>Silme talebi sonrasında:</p>
-<ul>
-  <li>Talep, <strong>tarafımıza ulaşmasından itibaren</strong> en geç <strong>30 gün</strong>
-      içinde sonuçlandırılır</li>
-  <li>Hesabınız, giriş bilgileriniz, profil bilgileriniz ve cihaz kaydınız
-      <strong>erişime kapatılır ve kullanılamaz hâle getirilir</strong>; bu bilgilerle uygulamaya
-      giriş yapılamaz ve profiliniz kullanıcı listelerinde ve operasyon ekranlarında yer almaz</li>
-  <li>Silme öncesinde oluşmuş iş kayıtlarında ve yöneticilere iletilmiş bildirimlerde
-      adınızın geçmeye devam etmesi mümkündür</li>
-  <li><strong>Silinemeyenler:</strong> sefer kayıtları, mola kayıtları ve sevkiyat belgeleri,
-      iş ilişkisi ile ticari ve vergisel mevzuattan doğan saklama yükümlülükleri nedeniyle
-      <strong>15 yıl</strong> boyunca saklanmaya devam eder; süre dolduğunda silinir veya
-      kimliğinizle ilişkisi koparılarak anonim hâle getirilir</li>
-  <li>Devam eden bir seferiniz varsa talebiniz, sefer tamamlandıktan sonra yetkili personel
-      tarafından sonuçlandırılır</li>
-</ul>
-<p>Uygulamayı telefonunuzdan silmeniz hesabınızı silmez; yalnızca cihazdaki yerel önbelleği kaldırır.</p>
-
-<h2>11. Çocukların gizliliği</h2>
-<p>
-  FiloMobil 18 yaşından küçüklere yönelik değildir ve bilerek 18 yaş altı kişilerden veri toplamaz.
-  Uygulama yalnızca kurumsal olarak tanımlanmış sürücü hesaplarıyla kullanılır.
-</p>
-
-<h2>12. Değişiklikler</h2>
-<p>
-  Politika güncellendiğinde bu sayfadaki “Son güncelleme” tarihi değiştirilir. Önemli
-  değişikliklerde uygulama içi bildirim ile bilgilendirme yapılır.
-</p>
-
-<h2>13. İletişim</h2>
+<h2>İletişim</h2>
 <p>
   SARP HAVACILIK LOJİSTİK TURİZM SANAYİ ve TİCARET A.Ş.<br>
   Organize Sanayi Bölgesi, Şehitler Bulvarı 15. Cadde No:23, Eskişehir<br>
   E-posta: <a href="mailto:kvkk@sarplojistik.com">kvkk@sarplojistik.com</a><br>
   Telefon: +90 222 236 22 55
 </p>
+
+<p><a href="index.html">← Gizlilik Politikası</a></p>
 
 </div>
 </body>
